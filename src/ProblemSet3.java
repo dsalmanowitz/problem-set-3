@@ -5,16 +5,16 @@ public class ProblemSet3 {
 
 	public static void main(String[] args) {
 		ProblemSet3 ps3 = new ProblemSet3();
-		//ps3.dateFashion(0, 0);
-		// ps3.fizzString("fb");
-		// ps3.squirrelPlay(0, true);
-		// ps3.fizzStringAgain(0);
+		ps3.dateFashion(0, 0);
+		ps3.fizzString("fb");
+		ps3.squirrelPlay(0, true);
+		ps3.fizzStringAgain(0);
 		ps3.makeBricks(0, 0, 0);
-		// ps3.loneSum(0, 0, 0);
-		// ps3.luckySum(0, 0, 0);
-		// ps3.factorialFor(0);
-		// ps3.factorialWhile(0);
-		// ps3.isPrime(0);
+		ps3.loneSum(0, 0, 0);
+		ps3.luckySum(0, 0, 0);
+		ps3.factorialFor(0);
+		ps3.factorialWhile(0);
+		ps3.isPrime(0);
 		in.close();
 	}
 	
