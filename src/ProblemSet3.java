@@ -29,9 +29,9 @@ public class ProblemSet3 {
 	 * the result is 1 (maybe). Print YES, NO, or MAYBE. Nothing more,
 	 * nothing less.
 	 * 
-	 * dateFashion(5, 10) → YES
-	 * dateFashion(5, 2) → NO
-	 * dateFashion(5, 5) → MAYBE
+	 * dateFashion(5, 10) â†’ YES
+	 * dateFashion(5, 2) â†’ NO
+	 * dateFashion(5, 5) â†’ MAYBE
 	 */
 	
 	public void dateFashion(int you, int date) {
@@ -55,9 +55,9 @@ public class ProblemSet3 {
 	 * conditions are true, print FIZZBUZZ. In all other cases, print
 	 * the string unchanged.
 	 * 
-	 * fizzString("fig") → FIZZ
-	 * fizzString("dib") → BUZZ
-	 * fizzString("fib") → FIZZBUZZ
+	 * fizzString("fig") â†’ FIZZ
+	 * fizzString("dib") â†’ BUZZ
+	 * fizzString("fib") â†’ FIZZBUZZ
 	 */
 	
 	public void fizzString(String str) {
@@ -65,12 +65,12 @@ public class ProblemSet3 {
 		str = in.nextLine();
 		if (str.charAt(0) == 'f' || str.charAt(0) == 'F') {
 			if (str.charAt(str.length()-1) == 'b' || str.charAt(str.length()-1) == 'B') {
-				System.out.println("FIZZBUZZ");
+				System.out.println("FIZZBUZZ.");
 			} else {
-				System.out.println("FIZZ");
+				System.out.println("FIZZ.");
 			}
 		} else if (str.charAt(str.length()-1) == 'b' || str.charAt(str.length()-1) == 'B') {
-			System.out.println("BUZZ");
+			System.out.println("BUZZ.");
 		} else {
 			System.out.println(str);
 		}
@@ -83,9 +83,9 @@ public class ProblemSet3 {
 	 * temperature and a boolean isSummer, print YES if the squirrels play and
 	 * NO otherwise.
 	 * 
-	 * squirrelPlay(70, false) → YES
-	 * squirrelPlay(95, false) → NO
-	 * squirrelPlay(95, true) → YES
+	 * squirrelPlay(70, false) â†’ YES
+	 * squirrelPlay(95, false) â†’ NO
+	 * squirrelPlay(95, true) â†’ YES
 	 */
 	
 	public void squirrelPlay(int temp, boolean isSummer) {
@@ -115,9 +115,9 @@ public class ProblemSet3 {
 	 * the number; if the number is divisible by 5 print BUZZ; if divisible by
 	 * both 3 and 5, print FIZZBUZZ.
 	 * 
-	 * fizzStringAgain(1) → 1!
-	 * fizzStringAgain(2) → 2!
-	 * fizzStringAgain(3) → FIZZ!
+	 * fizzStringAgain(1) â†’ 1!
+	 * fizzStringAgain(2) â†’ 2!
+	 * fizzStringAgain(3) â†’ FIZZ!
 	 */
 	
 	public void fizzStringAgain(int n) {
@@ -126,12 +126,12 @@ public class ProblemSet3 {
 		in.nextLine();
 		if (n % 3 == 0) {
 			if (n % 5 == 0) {
-			System.out.println("FIZZBUZZ");
+			System.out.println("FIZZBUZZ!");
 			} else {
-				System.out.println("FIZZ");
+				System.out.println("FIZZ!");
 			}
 		} else if (n % 5 == 0) {
-			System.out.println("BUZZ");
+			System.out.println("BUZZ!");
 		} else {
 			System.out.println(n + "!");
 		}
@@ -143,9 +143,9 @@ public class ProblemSet3 {
 	 * to make the goal by choosing from the given bricks, otherwise print NO. This is a
 	 * little harder than it looks and can be done without any loops.
 	 * 
-	 * makeBricks(3, 1, 8) → YES
-	 * makeBricks(3, 1, 9) → NO
-	 * akeBricks(3, 2, 10) → YES
+	 * makeBricks(3, 1, 8) â†’ YES
+	 * makeBricks(3, 1, 9) â†’ NO
+	 * akeBricks(3, 2, 10) â†’ YES
 	 */
 	
 	public void makeBricks(int small, int big, int goal) {
@@ -156,6 +156,9 @@ public class ProblemSet3 {
 		System.out.println("How long would you like your row to be? (in inches)");
 		goal = in.nextInt();
 		in.nextLine();
+		if (small < 0 || big < 0 || goal <= 0) {
+			System.out.println("Please enter positive values.");
+		}
 		while (goal >= 5 && big > 0) {
 			goal -= 5;
 			big--;
@@ -175,9 +178,9 @@ public class ProblemSet3 {
 	 * Given 3 int values, a b c, print their sum. However, if one of the values is the
 	 * same as another of the values, it does not count towards the sum.
 	 * 
-	 * loneSum(1, 2, 3) → 6
-	 * loneSum(3, 2, 3) → 2
-	 * loneSum(3, 3, 3) → 0
+	 * loneSum(1, 2, 3) â†’ 6
+	 * loneSum(3, 2, 3) â†’ 2
+	 * loneSum(3, 3, 3) â†’ 0
 	 */
 	
 	public void loneSum(int a, int b, int c) {
@@ -189,11 +192,11 @@ public class ProblemSet3 {
 		if (a == b && b == c) {
 			System.out.println("0");
 		} else if (a == b) {
-				System.out.println(c);
+			System.out.println(c);
 		} else if (b == c) {
-				System.out.println(a);
+			System.out.println(a);
 		} else if (a == c) {
-				System.out.println(b);;
+			System.out.println(b);;
 		} else {
 			System.out.println(a + b + c);
 		}
@@ -204,9 +207,9 @@ public class ProblemSet3 {
 	 * then it does not count towards the sum and values to its right do not count. So for
 	 * example, if b is 13, then both b and c do not count.
 	 * 
-	 * luckySum(1, 2, 3) → 6
-	 * luckySum(1, 2, 13) → 3
-	 * luckySum(1, 13, 3) → 1
+	 * luckySum(1, 2, 3) â†’ 6
+	 * luckySum(1, 2, 13) â†’ 3
+	 * luckySum(1, 13, 3) â†’ 1
 	 */
 	
 	public void luckySum(int a, int b, int c) {
@@ -229,9 +232,9 @@ public class ProblemSet3 {
 	 * Given an integer value, n, compute the factorial of n. You are required to use a
 	 * for loop to solve this exercise.
 	 * 
-	 * factorialFor(3) → 6
-	 * factorialFor(4) → 24
-	 * factorialFor(5) → 120
+	 * factorialFor(3) â†’ 6
+	 * factorialFor(4) â†’ 24
+	 * factorialFor(5) â†’ 120
 	 */
 	
 	public void factorialFor(int n) {
@@ -242,7 +245,11 @@ public class ProblemSet3 {
 		for (; n >= 1; n--) {
 			num *= n;
 		}
+		if (n < 1){
+			System.out.println("Please enter a number greater than 0.");
+		} else {
 		System.out.println(num);
+		}
 	}
 	
 	/*
@@ -250,9 +257,9 @@ public class ProblemSet3 {
 	 * while loop to solve this exercise. Your method should print n! = y (where n is the
 	 * input and y is the output). Nothing more, nothing less.
 	 * 
-	 * factorialWhile(3) → 6
-	 * factorialWhile(4) → 24
-	 * factorialWhile(5) → 120
+	 * factorialWhile(3) â†’ 6
+	 * factorialWhile(4) â†’ 24
+	 * factorialWhile(5) â†’ 120
 	 */
 	
 	public void factorialWhile(int n) {
@@ -264,16 +271,20 @@ public class ProblemSet3 {
 			num *= n;
 			n--;
 		}
+		if (n < 1){
+			System.out.println("Please enter a number greater than 0.");
+		} else {
 		System.out.println(num);
+		}
 	}
 	
 	/*
 	 * Given an integer value, n, determine whether or not n is a prime number. Your method
 	 * should either print PRIME or NOT PRIME. Nothing more, nothing less.
 	 * 
-	 * isPrime(11) → YES
-	 * isPrime(17) → YES
-	 * isPrime(112) → NO
+	 * isPrime(11) â†’ YES
+	 * isPrime(17) â†’ YES
+	 * isPrime(112) â†’ NO
 	 */
 	
 	public void isPrime(int n) {
